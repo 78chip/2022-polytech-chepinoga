@@ -1,5 +1,6 @@
 #include<iostream>
 #include<algorithm>
+#include<ctime>
 using namespace std;
 int search(int arr[], int n, int x)
 {
@@ -16,7 +17,7 @@ int search(int arr[], int n, int x)
 int main()
 
 {
-    
+     unsigned int start_time =  clock();
     
     
     
@@ -40,5 +41,10 @@ int main()
     {
         cout << "find it" << result;
     }
+    unsigned int end_time = clock(); // конечное время
+    unsigned int search_time = end_time - start_time;
+    
+    cout << "runtime = " << search_time << endl; // время работы программы                  
+    system("pause");
     return 0;
 }
