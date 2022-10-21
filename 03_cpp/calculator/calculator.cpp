@@ -6,11 +6,9 @@ int main()
     char o;
     float n1, n2, n12;
 
-    cout << "Enter the operator (+, -, *, /, ^): ";
-    cin >> o;
-
-    cout << "Enter the operands: ";
-    cin >> n1 >> n2;
+    cout << "Enter the operands and operator (+, -, *, /, ^)" << endl;
+    cout << "Example: 2+2" << endl;
+    cin >> n1 >> o >> n2;
 
     n12 = n1;
 
