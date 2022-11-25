@@ -3,4 +3,5 @@ project(binarysearch LANGUAGES CXX)
 
 set(CMAKE_CXX_STANDARD 14)
 
-add_executable(bin.cpp binaryfunc.cpp)
+add_executable(binarysearch bin.cpp binaryfunc.cpp)
+
