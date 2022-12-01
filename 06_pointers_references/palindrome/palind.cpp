@@ -1,20 +1,25 @@
-#include <cassert>
+#include<cassert>
+#include<cstring>
 
-unsigned int length(const char* str) {
-    if (!str)
-        return 0;
-    const char* end = str;
-    for (; *end != '\0'; ++end)
-        ;
-    return end - str;
+bool palindrome_check(const char* s)
+{
+	int k = 0;
+	int n = strlen(s) - 1;
+	for (int i = 0, k = n; i <= k; i++, k--)
+	{
+		if (s[i] != s[k])
+			return false;
+	}
+	return true;
 }
 
-int main() {
-    assert(length("a") == 1);
-    assert(length("ab") == 2);
-    assert(length("") == 0);
-    assert(length("hello world") == 11);
-    assert(length(nullptr) == 0);
-    return 0;
+int main()
+{
+	assert(palindrome_check("level") == true);
+	assert(palindrome_check("ufotofu") == true);
+	assert(palindrome_check("informatika") == false);
+	assert(palindrome_check("civic") == true);
+	assert(palindrome_check(" ") == true);
+        assert(palindrome_check("Radiotecknika") == false);
+	return  0;
 }
-
