@@ -15,10 +15,10 @@ unsigned int length(const char* str)
 
 int main()
 {
-    assert(length("a") == 1);
-    assert(length("ab") == 2);
-    assert(length("") == 0);
-    assert(length("hello world") == 11);
+    assert(length("Fisics") == 6);
+    assert(length("Angem") == 5);
+    assert(length("Informatika") == 11);
+    assert(length("Matanal") == 7);
     assert(length(nullptr) == 0);
     return 0;
 }
